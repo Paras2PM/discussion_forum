@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "0b656181-04da-43a5-aaf7-7acd1819f6e1",
+		"name": "discussion_service_authUser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "post_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "post8",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Aenean lectus turpis, venenatis viverra eleifend eget, posuere sed est. Suspendisse risus nunc, aliquam eget nibh eget, laoreet fermentum tellus. In eros tortor, dignissim ac consectetur vitae, aliquet at orci. Ut consequat tortor vitae dui cursus vulputate. Maecenas accumsan commodo purus, at maximus tellus. Aliquam volutpat iaculis metus. Nunc rutrum tempus egestas. Proin neque massa, sollicitudin et est et, dapibus lacinia metus. In venenatis, dolor viverra dapibus vehicula, erat enim rutrum eros, in laoreet libero neque non erat. Maecenas et diam ullamcorper, iaculis risus nec, blandit felis. Aliquam suscipit consequat aliquet. Etiam aliquam dui rhoncus vulputate suscipit. Suspendisse scelerisque quis purus eget sagittis. Donec volutpat ac nunc ut pulvinar. Ut dapibus tristique orci eu mollis.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_retrieve",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_update_is_author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "post7k",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Aenean lectus turpis, venenatis viverra eleifend eget, posuere sed est. Suspendisse risus nunc, aliquam eget nibh eget, laoreet fermentum tellus. In eros tortor, dignissim ac consectetur vitae, aliquet at orci. Ut consequat tortor vitae dui cursus vulputate. Maecenas accumsan commodo purus, at maximus tellus. Aliquam volutpat iaculis metus. Nunc rutrum tempus egestas. Proin neque massa, sollicitudin et est et, dapibus lacinia metus. In venenatis, dolor viverra dapibus vehicula, erat enim rutrum eros, in laoreet libero neque non erat. Maecenas et diam ullamcorper, iaculis risus nec, blandit felis. Aliquam suscipit consequat aliquet. Etiam aliquam dui rhoncus vulputate suscipit. Suspendisse scelerisque quis purus eget sagittis. Donec volutpat ac nunc ut pulvinar. Ut dapibus tristique orci eu mollis.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/7/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_update_is_not_author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/2/?title=post2a&content=Aliquam eget neque sed diam consectetur vestibulum. Duis blandit tempus lorem, auctor mattis massa scelerisque eget. Integer sodales interdum augue, et gravida orci mattis non. Nulla enim tortor, pulvinar non nulla ut, porta bibendum magna. Quisque efficitur, enim vitae sodales ullamcorper, odio arcu euismod ex, nec luctus lorem quam eu ex. Nunc eros turpis, sodales at diam nec, iaculis rutrum nisi. Cras blandit, mauris non rutrum maximus, lorem metus auctor augue, ac interdum neque tortor vitae mi. Sed accumsan scelerisque orci nec tempus.",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "post2a"
+								},
+								{
+									"key": "content",
+									"value": "Aliquam eget neque sed diam consectetur vestibulum. Duis blandit tempus lorem, auctor mattis massa scelerisque eget. Integer sodales interdum augue, et gravida orci mattis non. Nulla enim tortor, pulvinar non nulla ut, porta bibendum magna. Quisque efficitur, enim vitae sodales ullamcorper, odio arcu euismod ex, nec luctus lorem quam eu ex. Nunc eros turpis, sodales at diam nec, iaculis rutrum nisi. Cras blandit, mauris non rutrum maximus, lorem metus auctor augue, ac interdum neque tortor vitae mi. Sed accumsan scelerisque orci nec tempus."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_delete_is_author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/8/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_delete_is_not_author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostLikes",
+			"item": [
+				{
+					"name": "post_likes_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/1/like",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"1",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like_post_didnt_like_before",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/6/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"6",
+								"like",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like_post_liked_before",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/6/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"6",
+								"like",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dislike_post_didnt_like_before",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/9/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"9",
+								"like",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dislike_post_liked_before",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/post/6/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"6",
+								"like",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "123456",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

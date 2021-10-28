@@ -7,7 +7,7 @@ class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, null=False, on_delete=models.CASCADE)
     content = models.TextField(null=False)
     creation_date = models.DateTimeField(auto_now_add=True)
-    update_date = models.DateTimeField(auto_now_add=True) 
+    update_date = models.DateTimeField(auto_now=True) 
     
     class Meta:
         ordering = ['-creation_date']
